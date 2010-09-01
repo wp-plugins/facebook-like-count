@@ -33,7 +33,7 @@
 		<td><?php echo $likecount;?></td>
 	</tr>
 	<?php
-		if(get_option("fblico_spent".$curr_user)!='0'){
+		if(get_option("fblico_spent".$curr_user)!='0' || get_option("fblico_spent".$curr_user)==''){
 	?>
 	<tr>
 		<th style="text-align:left;width:150px;padding:6px 0;"><?php _e('Spent','fblico');?></th>
