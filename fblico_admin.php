@@ -228,6 +228,18 @@
 
 			<table class="form-table" style="width:auto;">
 				<tr valign="top">
+					<th style="font-weight:bold;width:auto;"><?php _e('Maximum number of posts to show','fblico');?></th>
+					<th style="font-weight:bold;">
+						<form action="options.php" method="post">
+							<?php wp_nonce_field('update-options');?>	
+							<input type="text" value="<?php echo get_option("fblico_number_posts");?>" name="fblico_number_posts" style="width:30px;"/>
+							<input type="hidden" name="action" value="update" />
+							<input type="hidden" name="page_options" value="fblico_number_posts" />
+							<input type="submit" value="<?php _e('save','fblico');?>" class="button-secondary" />
+						</form>
+					</th>
+				</tr>	
+				<tr valign="top">
 					<th style="font-weight:bold;width:auto;"><?php _e('Title','fblico');?></th>
 					<th style="font-weight:bold;"><?php _e('Likes','fblico');?></th>
 				</tr>	
@@ -242,14 +254,22 @@
 					arsort($post_likes_array);
 					
 					foreach($post_likes_array as $postID => $post_likecount){
+						
 						$post_title = strip_tags(get_the_title($postID));
 						$post_permalink = get_permalink($postID);
 						
-						echo'
-						<tr>
-							<td><a href="'. $post_permalink.'" title="'. __("Link to ","fblico") .$post_title.'" target="_blank">'.$post_title.'</a></td>
-							<td>'.$post_likecount.'</td>
-						</tr>';
+						if($post_likecount!=''){
+							echo'
+							<tr>
+								<td><a href="'. $post_permalink.'" title="'. __("Link to ","fblico") .$post_title.'" target="_blank">'.$post_title.'</a></td>
+								<td>'.$post_likecount.'</td>
+							</tr>';
+						}
+						
+						$paging++;
+						if(get_option("fblico_number_posts")==$paging && (get_option("fblico_number_posts") != '0' || get_option("fblico_number_posts")=='')){
+							break;
+						}
 					}
 				?>
 		
