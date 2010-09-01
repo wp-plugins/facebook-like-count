@@ -1,7 +1,6 @@
 <?php
 	$curr_user = get_current_user_id();
-	
-	
+		
 	$posts = get_posts('showposts=-1&post_type=any');
 	if ($posts) {
 		$cat_post_ids = array();
@@ -10,8 +9,6 @@
 			$permalinks[] = '"'.get_permalink( $post->ID ).'"';
 		}
 	}
-
-	$likes_array = array();
 	
 	foreach($post_ids as $post) {
 		
@@ -22,9 +19,10 @@
 		
 		if($post_author==$curr_user){
 			$likecount += $post_like_count;
+			$user_has_posts = 1;
 		}
-
 	}
+	
 	if(get_option("fblico_spent".$curr_user)){
 			$likecount = $likecount - get_option("fblico_spent".$curr_user);
 	}
@@ -34,8 +32,12 @@
 		<th style="text-align:left;width:150px;padding:6px 0;"><?php _e('Likes','fblico');?></th>
 		<td><?php echo $likecount;?></td>
 	</tr>
+	<?php
+		if(get_option("fblico_spent".$curr_user)!='0'){
+	?>
 	<tr>
 		<th style="text-align:left;width:150px;padding:6px 0;"><?php _e('Spent','fblico');?></th>
 		<td><?php echo get_option("fblico_spent".$curr_user);?></td>
 	</tr>
+	<?php } ?>
 </table>

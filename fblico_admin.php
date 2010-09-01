@@ -228,7 +228,7 @@
 
 			<table class="form-table" style="width:auto;">
 				<tr valign="top">
-					<th style="font-weight:bold;width:auto;"><?php _e('Post Title','fblico');?></th>
+					<th style="font-weight:bold;width:auto;"><?php _e('Title','fblico');?></th>
 					<th style="font-weight:bold;"><?php _e('Likes','fblico');?></th>
 				</tr>	
 		
