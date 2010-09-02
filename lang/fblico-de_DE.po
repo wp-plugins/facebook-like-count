@@ -1,0 +1,97 @@
+# Translation of the WordPress plugin   by .
+# Copyright (C) 2010
+# This file is distributed under the same license as the  package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Facebook Like Count\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/facebook-like-count\n"
+"POT-Creation-Date: 2010-09-02 15:51+0000\n"
+"PO-Revision-Date: 2010-09-02 17:55+0100\n"
+"Last-Translator: Marco <nagi.b@web.de>\n"
+"Language-Team: Unl3a5h3r <marco.scheffel@gmx.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: GERMANY\n"
+"X-Poedit-KeywordsList: __;_e\n"
+
+#: facebook_like_count.php:63
+msgid "Likes for"
+msgstr "Likes für"
+
+#: fblico_admin.php:5
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Du hast keine ausreichenden Rechte um diese Seite anzuzeigen."
+
+#: fblico_admin.php:9
+msgid "Facebook Like Count for Wordpress - Admin"
+msgstr "Facebook Like Count für Wordpress - Admin"
+
+#: fblico_admin.php:14
+msgid "App ID"
+msgstr "App ID"
+
+#: fblico_admin.php:18
+msgid "Facebook App ID"
+msgstr "Facebook App ID"
+
+#: fblico_admin.php:24
+#: fblico_admin.php:219
+#: fblico_admin.php:238
+msgid "save"
+msgstr "speichern"
+
+#: fblico_admin.php:69
+msgid "Connect with Facebook"
+msgstr "Mit Facebook verbinden"
+
+#: fblico_admin.php:75
+msgid "Like Chart - Authors"
+msgstr "Like Tabelle - Autoren"
+
+#: fblico_admin.php:133
+msgid "No likes"
+msgstr "Keine Likes vorhanden"
+
+#: fblico_admin.php:147
+msgid "update data"
+msgstr "Daten aktualisieren"
+
+#: fblico_admin.php:158
+msgid "Loading..."
+msgstr "Laden..."
+
+#: fblico_admin.php:166
+msgid "Author Name"
+msgstr "Name des Autors"
+
+#: fblico_admin.php:167
+#: fblico_admin.php:244
+#: fblico_dashboard.php:37
+msgid "Likes"
+msgstr "Likes"
+
+#: fblico_admin.php:168
+#: fblico_dashboard.php:44
+msgid "Spent"
+msgstr "Ausgegeben"
+
+#: fblico_admin.php:226
+msgid "Like Chart - Posts"
+msgstr "Like Tabelle - Artikel"
+
+#: fblico_admin.php:231
+msgid "Maximum number of posts to show"
+msgstr "Maximal anzuzeigende Artikel"
+
+#: fblico_admin.php:243
+msgid "Title"
+msgstr "Titel"
+
+#: fblico_admin.php:264
+msgid "Link to "
+msgstr "Link zu "
+
