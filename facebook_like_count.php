@@ -3,7 +3,7 @@
 	Plugin Name: Facebook Like Count
 	Plugin URI: http://fblico.mafact.de/
 	Description: Counts the likes of blog posts and creates 2 charts: authors by likes and posts by likes
-	Version: 1.3.1
+	Version: 1.4
 	Author: Marco Scheffel
 	Author URI: http://www.facebook.com/ms.fb.ger
 	License: GPLv2
@@ -24,7 +24,13 @@
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 	
 */
+	include_once(ABSPATH . WPINC . '/pluggable.php');
+	global $current_user;
+	get_currentuserinfo();	
 
+	$curr_user = $current_user->ID;
+	$first_name = $current_user->user_firstname;
+	$last_name = $current_user->user_lastname;
 	
 	/**
 	 * Loading localisation
@@ -54,9 +60,6 @@
 	
 	
 	function fblico_setup() {
-		$curr_user = get_current_user_id();
-		$first_name = get_the_author_meta( 'first_name', $curr_user );
-		$last_name = get_the_author_meta( 'last_name', $curr_user );
 		$fblico_title = __("Likes for","fblico")." ".$first_name." ".$last_name;
 		wp_add_dashboard_widget( 'fblico', $fblico_title, 'fblico_dashboard' );
 	}
@@ -65,7 +68,6 @@
 	/**
 	 * Add Actions
 	 */
-	$fblico_curr_user = get_current_user_id();
 		
 	$fblico_posts = get_posts('showposts=-1&post_type=any');
 	if ($fblico_posts) {
@@ -84,12 +86,9 @@
 		}
 	}
 	
-	if($fblico_user_has_posts){
+
 		add_action('wp_dashboard_setup', 'fblico_setup');
-	}
-	else{
-		 remove_action('wp_dashboard_setup', 'fblico_setup');
-	}
+
 	
 	add_action('admin_menu', 'fblico_menu');
 ?>

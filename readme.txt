@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: like, facebook, social network, bonus system
 Requires at least: 3.0
 Tested up to: 3.1
-Stable tag: 1.3.1
+Stable tag: 1.4
 
 Counts the likes of blog posts and creates 2 charts: authors by likes and posts by likes
 
@@ -28,7 +28,10 @@ You can handle the likes as "points" so that your authors can trade them in for 
 As of version 1.0: Yes! I will loot further into this issue
 
 == Changelog ==
-= 1.3 =
+= 1.4 =
+* Important security update
+
+= 1.3.1 =
 * small fix for dashboard widget
 
 = 1.3 =
@@ -44,3 +47,6 @@ As of version 1.0: Yes! I will loot further into this issue
 = 1.0 =
 * Release
 
+== Upgrade Notice ==
+= 1.4 =
+Upgrade immediately. Relly important security update. Blog might crash if you do not update.
