@@ -35,7 +35,7 @@ As of version 1.0: Yes! I will loot further into this issue
 == Changelog ==
 = 1.6 =
 * Only posts with likes are display on admin page
-* added Screenshots
+* added screenshots
 * added German localization
 * small bugfix
 
