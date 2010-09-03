@@ -4,7 +4,7 @@
 	get_currentuserinfo();	
 
 	$curr_user = $current_user->ID;
-	
+	$curr_user_level = $current_user->user_level;
 	
 	$posts = get_posts('showposts=-1&post_type=any');
 	if ($posts) {
@@ -44,6 +44,12 @@
 		<th style="text-align:left;width:150px;padding:6px 0;"><?php _e('Spent','fblico');?></th>
 		<td><?php echo get_option("fblico_spent".$curr_user);?></td>
 	</tr>
+	<?php } 
+		if($curr_user_level==10){
+	?>
+	<tr>
+		<th style="text-align:left;width:150px;padding:6px 0;"><?php _e('Spent','fblico');?></th>
+		<td><?php echo get_option("fblico_spent".$curr_user);?></td>
+	</tr>
 	<?php } ?>
-	
 </table>

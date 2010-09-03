@@ -258,7 +258,7 @@
 						$post_title = strip_tags(get_the_title($postID));
 						$post_permalink = get_permalink($postID);
 						
-						if($post_likecount!='' || $post_likecount=='0'){
+						if($post_likecount!='' xor $post_likecount=='0'){
 							echo'
 							<tr>
 								<td><a href="'. $post_permalink.'" title="'. __("Link to ","fblico") .$post_title.'" target="_blank">'.$post_title.'</a></td>
