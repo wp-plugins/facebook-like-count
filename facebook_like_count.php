@@ -60,6 +60,13 @@
 	
 	
 	function fblico_setup() {
+		
+		global $current_user;
+		get_currentuserinfo();	
+
+		$curr_user = $current_user->ID;
+		$first_name = $current_user->user_firstname;
+		$last_name = $current_user->user_lastname;
 		$fblico_title = __("Likes for","fblico")." ".$first_name." ".$last_name;
 		wp_add_dashboard_widget( 'fblico', $fblico_title, 'fblico_dashboard' );
 	}
