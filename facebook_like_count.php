@@ -3,7 +3,7 @@
 	Plugin Name: Facebook Like Count
 	Plugin URI: http://fblico.mafact.de/
 	Description: Counts the likes of blog posts and creates 2 charts: authors by likes and posts by likes
-	Version: 1.7
+	Version: 1.8
 	Author: Marco Scheffel
 	Author URI: http://www.facebook.com/ms.fb.ger
 	License: GPLv2

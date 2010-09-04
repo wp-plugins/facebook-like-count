@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: like, facebook, social network, bonus system
 Requires at least: 3.0
 Tested up to: 3.1
-Stable tag: 1.7
+Stable tag: 1.8
 
 Counts the likes of blog posts and creates 2 charts: authors by likes and posts by likes
 
@@ -33,6 +33,10 @@ As of version 1.0: Yes! I will loot further into this issue
 1. dashboard widget
 
 == Changelog ==
+= 1.8 =
+* name shows not correct on dasboard widget title
+* admins get a link on the dashboard widget to update data
+
 = 1.7 =
 * several bugfixes
 
