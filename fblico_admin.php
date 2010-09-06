@@ -72,7 +72,7 @@
 	</div>
 
 	<div id="poststuff" class="postbox">
-		<h3 style="cursor:default"><?php _e('Like Chart - Authors','fbcomcon');?></h3>
+		<h3 style="cursor:default"><?php _e('Like Chart','fbcomcon');echo ' - ';_e('Authors','fbcomcon');?></h3>
 		<div class="inside">
 			<form action="options.php" method="post">
 				<?php wp_nonce_field('update-options');?>
@@ -223,7 +223,7 @@
 	</div>
 
 	<div id="poststuff" class="postbox">
-		<h3 style="cursor:default"><?php _e('Like Chart - Posts','fbcomcon');?></h3>
+		<h3 style="cursor:default"><?php _e('Like Chart','fbcomcon'); echo ' - ';_e('Posts','fbcomcon');?></h3>
 		<div class="inside">
 
 			<table class="form-table" style="width:auto;">
@@ -284,7 +284,7 @@
 		<input type="image" src="<?php echo get_option( "siteurl" ).'/'.PLUGINDIR.'/facebook-comment-control/img/donate.jpg';?>" border="0" name="submit" alt="Buy me a beer">
 		<img alt="" border="0" src="https://www.paypal.com/de_DE/i/scr/pixel.gif" width="1" height="1">
 	</form>
-	Plugin Homepage: <a href="http://fblico.mafact.de/">Facebook Like Count</a><br/>
-	Plugin Author: <a href="http://www.facebook.com/ms.fb.ger">Marco Scheffel</a>
+	<?php _e('Plugin Homepage','fblico');?>: <a href="http://fblico.mafact.de/">Facebook Like Count</a><br/>
+	<?php _e('Plugin Author','fblico');?>: <a href="http://www.facebook.com/ms.fb.ger">Marco Scheffel</a>
 </div>
 <?php }} ?>

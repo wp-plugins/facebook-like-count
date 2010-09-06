@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Facebook Like Count\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/facebook-like-count\n"
-"POT-Creation-Date: 2010-09-02 15:51+0000\n"
-"PO-Revision-Date: 2010-09-02 17:55+0100\n"
+"POT-Creation-Date: 2010-09-04 16:28+0000\n"
+"PO-Revision-Date: 2010-09-04 18:28+0100\n"
 "Last-Translator: Marco <nagi.b@web.de>\n"
 "Language-Team: Unl3a5h3r <marco.scheffel@gmx.net>\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,7 @@ msgstr ""
 "X-Poedit-Country: GERMANY\n"
 "X-Poedit-KeywordsList: __;_e\n"
 
-#: facebook_like_count.php:63
+#: facebook_like_count.php:70
 msgid "Likes for"
 msgstr "Likes für"
 
@@ -94,4 +94,8 @@ msgstr "Titel"
 #: fblico_admin.php:264
 msgid "Link to "
 msgstr "Link zu "
+
+#: fblico_dashboard.php:51
+msgid "Go to admin panel to update data"
+msgstr "Zum Administrationsmenü um Daten zu aktualisieren"
 
