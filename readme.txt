@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: like, facebook, social network, bonus system
 Requires at least: 3.0
 Tested up to: 3.1
-Stable tag: 2.0
+Stable tag: 2.1
 
 Counts the likes of blog posts and creates 2 charts: authors by likes and posts by likes
 
@@ -33,6 +33,9 @@ Until now: Yes! I will look further into this issue
 1. dashboard widget
 
 == Changelog ==
+= 2.1 =
+* bugfix for windows servers
+
 = 2.0 =
 * stats can now be updated directly on dashboard
 * FB Like count db widget runs in iframe now to boost compatibility with <a href="http://fbcomcon.mafact.de/">Facebook Comment Control</a>
@@ -74,6 +77,9 @@ Until now: Yes! I will look further into this issue
 * Release
 
 == Upgrade Notice ==
+= 2.1 =
+Plugin was bugged on windows servers. So please update.
+
 = 2.0 =
 Very important service, compatibility and stability upgrade.
 

@@ -1,11 +1,16 @@
 <?php
 
+	$server_root = $_SERVER['DOCUMENT_ROOT'];
+	$os_test = substr($server_root, -1);
+	if($os_test != '/'){
+		$server_root = $server_root.'/';
+	}
 	// Requires
-	require_once($_SERVER['DOCUMENT_ROOT'] . 'wp-load.php');
-	require_once($_SERVER['DOCUMENT_ROOT'] . 'wp-includes/post.php');
-	require_once($_SERVER['DOCUMENT_ROOT'] . 'wp-includes/functions.php');
-	require_once($_SERVER['DOCUMENT_ROOT'] . 'wp-includes/link-template.php');
-	require_once($_SERVER['DOCUMENT_ROOT'] . 'wp-includes/pluggable.php');
+	require_once($server_root . 'wp-load.php');
+	require_once($server_root . 'wp-includes/post.php');
+	require_once($server_root . 'wp-includes/functions.php');
+	require_once($server_root . 'wp-includes/link-template.php');
+	require_once($server_root . 'wp-includes/pluggable.php');
 
 	global $user_level;
     get_currentuserinfo();
