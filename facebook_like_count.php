@@ -93,9 +93,6 @@
 		}
 	}
 	
-
-		add_action('wp_dashboard_setup', 'fblico_setup');
-
-	
+	add_action('wp_dashboard_setup', 'fblico_setup');
 	add_action('admin_menu', 'fblico_menu');
 ?>
