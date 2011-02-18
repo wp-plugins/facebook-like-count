@@ -13,9 +13,30 @@
 	require_once($server_root . 'wp-includes/pluggable.php');
 
 	global $user_level;
+	global $current_user;
     get_currentuserinfo();
 
 	if(!empty($user_level)){
+	
+	
+	if($_POST['field_likecount']){ //if "update data" form got submitted
+		
+		$field_likecount	=	trim($_POST['field_likecount'],',');
+		
+		$arr_like_count = explode(',',$field_likecount);
+		$arr_post_ids = explode(',',$_POST["field_post_ids"]);
+		
+		$i = 0;
+		
+		foreach($arr_like_count as $likecount) {
+			
+			add_post_meta($arr_post_ids[$i], 'like_count', $likecount, 'true') or
+				update_post_meta($arr_post_ids[$i], 'like_count', $likecount);
+			
+			$i++;
+		}
+	}
+
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -29,8 +50,6 @@ body{font-family:"Lucida Grande",Verdana,Arial,"Bitstream Vera Sans",sans-serif;
 </head>
 <body>
 <?php
-	global $current_user;
-	get_currentuserinfo();	
 
 	$curr_user = $current_user->ID;
 	$curr_user_level = $current_user->user_level;
@@ -58,24 +77,6 @@ body{font-family:"Lucida Grande",Verdana,Arial,"Bitstream Vera Sans",sans-serif;
 	
 	if(get_option("fblico_spent".$curr_user)){
 			$likecount = $likecount - get_option("fblico_spent".$curr_user);
-	}
-		
-	if($_POST['field_likecount']){ //if "update data" form got submitted
-		
-		$field_likecount	=	trim($_POST['field_likecount'],',');
-		
-		$arr_like_count = explode(',',$field_likecount);
-		$arr_post_ids = explode(',',$_POST["field_post_ids"]);
-		
-		$i = 0;
-		
-		foreach($arr_like_count as $likecount) {
-			
-			add_post_meta($arr_post_ids[$i], 'like_count', $likecount, 'true') or
-				update_post_meta($arr_post_ids[$i], 'like_count', $likecount);
-			
-			$i++;
-		}
 	}
 ?>
 

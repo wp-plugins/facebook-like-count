@@ -4,15 +4,13 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: like, facebook, social network, bonus system
 Requires at least: 3.0
 Tested up to: 3.1
-Stable tag: 2.1
+Stable tag: 2.2
 
-Counts the likes of blog posts and creates 2 charts: authors by likes and posts by likes
+Development stopped
 
 == Description ==
 
-Counts the likes of blog posts and creates 2 charts: authors by likes and posts by likes
-
-You can handle the likes as "points" so that your authors can trade them in for special rewards. An option to adjust the likes of authors is included
+Development stopped
 
 == Installation ==
 
